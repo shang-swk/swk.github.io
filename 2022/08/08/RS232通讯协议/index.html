@@ -23,12 +23,12 @@
 <meta property="og:site_name" content="One ball">
 <meta property="og:description" content="RS232通讯协议一、硬件Hardware： 波特率: 2400 bps  数据位: 8 bits  停止位 : 1 bits  奇偶校验: NON 二、DB9使用标准直通线，长度不宜超过15米  三、命令    Q1 1-80K使用 状态查询    Q2 三相20-80K使用 状态查询   Q6 1-80K使用 状态查询   WA 6-80K使用 功率查询   S 1-80K使用 关机   &amp;#">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="c:/Users/ASUS/blog/source_posts/img/D89">
+<meta property="og:image" content="http://example.com/2022/08/08/RS232%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE/D89">
 <meta property="article:published_time" content="2022-08-08T15:55:29.594Z">
-<meta property="article:modified_time" content="2022-08-09T03:22:22.405Z">
+<meta property="article:modified_time" content="2022-08-09T03:35:12.928Z">
 <meta property="article:tag" content="RS232">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="c:/Users/ASUS/blog/source_posts/img/D89">
+<meta name="twitter:image" content="http://example.com/2022/08/08/RS232%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE/D89">
   
   
   
@@ -280,7 +280,7 @@
 <p>停止位 : 1 bits </p>
 <p>奇偶校验: NON</p>
 <p>二、DB9使用标准直通线，长度不宜超过15米</p>
-<p><img src="C:\Users\ASUS\blog\source_posts\img\D89" srcset="/img/loading.gif" lazyload alt="image-20220712112329773"></p>
+<p><img src="/2022/08/08/RS232%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE/D89" srcset="/img/loading.gif" lazyload alt="image-20220712112329773"></p>
 <p>三、命令</p>
 <table>
 <thead>
@@ -306,15 +306,15 @@
 <td align="center">功率查询</td>
 </tr>
 <tr>
-<td>S<n></td>
+<td>S<n></n></td>
 <td>1-80K使用</td>
 <td align="center">关机</td>
 </tr>
 </tbody></table>
-<p>&#x3D;&#x3D;备注：<cr>表示回车．&#x3D;&#x3D;</p>
+<p>&#x3D;&#x3D;备注：<cr>表示回车．&#x3D;&#x3D;</cr></p>
 <h3 id="（1）-查询命令-Q1"><a href="#（1）-查询命令-Q1" class="headerlink" title="（1） 查询命令 Q1"></a><strong>（1）</strong> <strong>查询命令</strong> <strong>Q1</strong></h3><p>为了查询系统基本的状态信息，&#x3D;&#x3D;主机发送：&#x3D;&#x3D;</p>
-<h4 id="Q1"><a href="#Q1" class="headerlink" title="Q1"></a>Q1<cr></h4><p><strong>UPS 回应</strong></p>
-<p>(MMM.M NNN.N PPP.P QQQ RR.R S.SS TT.T b7b6b5b4b3b2b1b0<CR></p>
+<h4 id="Q1"><a href="#Q1" class="headerlink" title="Q1"></a>Q1<cr></cr></h4><p><strong>UPS 回应</strong></p>
+<p>(MMM.M NNN.N PPP.P QQQ RR.R S.SS TT.T b7b6b5b4b3b2b1b0<CR></CR></p>
 <h4 id="输入电压-MMM-M"><a href="#输入电压-MMM-M" class="headerlink" title="输入电压: MMM.M"></a>输入电压: MMM.M</h4><p>M 是一个整数，范围为 0 – 9。单位是 V。</p>
 <h4 id="上次转电池放电时电压-NNN-N"><a href="#上次转电池放电时电压-NNN-N" class="headerlink" title="上次转电池放电时电压: NNN.N"></a><strong>上次转电池放电时电压</strong>: NNN.N</h4><p>N 是一个整数，范围为 0 – 9，有部分机种默认为 0。 单位是 V。</p>
 <h4 id="输出电压-PPP-P"><a href="#输出电压-PPP-P" class="headerlink" title="输出电压: PPP.P"></a><strong>输出电压: PPP.P</strong></h4><p>P 是十进制的整数，范围为 0 - 9。 单位是 V。三相输入时为 R 相电压。</p>
@@ -322,7 +322,7 @@
 <h4 id="输入频率-RR-R"><a href="#输入频率-RR-R" class="headerlink" title="输入频率: RR.R"></a>输入频率: RR.R</h4><p>R 是一个整数，范围为 0 – 9。 单位是 Hz。</p>
 <h4 id="电池单元电压-S-SS"><a href="#电池单元电压-S-SS" class="headerlink" title="电池单元电压: S.SS"></a><strong>电池单元电压</strong>: S.SS</h4><p>S 是一个整数，范围为 0 – 9。 单位是 V。每节电池有 6 个电池单元，读到的电压要乘以 6，得到单节电池电压。市电模式时，读到的是充电电压，电池模式时读到电池电压。</p>
 <h4 id="温度-TT-T"><a href="#温度-TT-T" class="headerlink" title="温度: TT.T"></a><strong>温度</strong>: TT.T</h4><p>T 是一个整数，范围为 0 – 9。单位是 摄氏度。</p>
-<h4 id="UPS-状态-b7b6b5b4b3b2b1b0"><a href="#UPS-状态-b7b6b5b4b3b2b1b0" class="headerlink" title="UPS 状态: b7b6b5b4b3b2b1b0"></a>UPS 状态: b7b6b5b4b3b2b1b0</h4><p><bn> 是二进制数 ‘0’ 或 ‘1’。UPS 状态：</p>
+<h4 id="UPS-状态-b7b6b5b4b3b2b1b0"><a href="#UPS-状态-b7b6b5b4b3b2b1b0" class="headerlink" title="UPS 状态: b7b6b5b4b3b2b1b0"></a>UPS 状态: b7b6b5b4b3b2b1b0</h4><p><bn> 是二进制数 ‘0’ 或 ‘1’。UPS 状态：</bn></p>
 <table>
 <thead>
 <tr>
@@ -364,10 +364,10 @@
 </tr>
 </tbody></table>
 <p>二进制代码被修改为 8 个字节的二进制代码为避免与 ASCII 控制代码混淆. </p>
-<p>&#x3D;&#x3D;备注：<cr>是回车，如果用 16 进制发送 Q1<cr>为 51 31 OD&#x3D;&#x3D;</p>
+<p>&#x3D;&#x3D;备注：<cr>是回车，如果用 16 进制发送 Q1<cr>为 51 31 OD&#x3D;&#x3D;</cr></cr></p>
 <p>举例:</p>
-<p>电脑: Q1<cr></p>
-<p>UPS:  (208.4 000.0 208.4 034 59.9 2.05 35.0 00110000<cr></p>
+<p>电脑: Q1<cr></cr></p>
+<p>UPS:  (208.4 000.0 208.4 034 59.9 2.05 35.0 00110000<cr></cr></p>
 <p>表示:</p>
 <p>输入电压 208.4 V.</p>
 <p>上次转电池放电时输入电压 000.0 V.</p>
@@ -377,10 +377,10 @@
 <p>每个电池单元电池电压 2.05 V。每节电池 12.3V</p>
 <p>温度 35.0</p>
 <p>UPS 是在线式的, UPS 故障, 旁路运行.</p>
-<h3 id="（2）-查询命令-Q2"><a href="#（2）-查询命令-Q2" class="headerlink" title="（2） 查询命令 Q2"></a>（2） 查询命令 Q2</h3><p>&#x3D;&#x3D;备注：<cr>是回车，如果用 16 进制发送 Q2<cr>为 51 32 OD&#x3D;&#x3D;</p>
-<p>Computer: <strong>Q2 <cr></strong></p>
+<h3 id="（2）-查询命令-Q2"><a href="#（2）-查询命令-Q2" class="headerlink" title="（2） 查询命令 Q2"></a>（2） 查询命令 Q2</h3><p>&#x3D;&#x3D;备注：<cr>是回车，如果用 16 进制发送 Q2<cr>为 51 32 OD&#x3D;&#x3D;</cr></cr></p>
+<p>Computer: <strong>Q2 <cr></cr></strong></p>
 <p>UPS: (MMM.M MMM.M MMM.M NNN.N PPP.P PPP.P PPP.P QQQ QQQ QQQ RR.R SSS.S TT.T</p>
-<p>b7b6b5b4b3b2b1b0 ttt.tt CCC BB ff ff ff ff wwwwwwww YO<cr></p>
+<p>b7b6b5b4b3b2b1b0 ttt.tt CCC BB ff ff ff ff wwwwwwww YO<cr></cr></p>
 <h4 id="UPS-输入电压-MMM-M"><a href="#UPS-输入电压-MMM-M" class="headerlink" title="UPS 输入电压: MMM.M"></a>UPS 输入电压: MMM.M</h4><p>M 是十进制的整数，范围为 0 - 9。 单位是 V。</p>
 <p>在单相系统中，只有 R 相是有效的，S 和 T 相总是 0。在三相系统中，按顺序代表 R、S、T 相的值</p>
 <h4 id="上次转电池放电时电压-NNN-N-1"><a href="#上次转电池放电时电压-NNN-N-1" class="headerlink" title="上次转电池放电时电压: NNN.N"></a>上次转电池放电时电压: NNN.N</h4><p>N 是一个整数，范围为 0 – 9，有部分机种默认为 0。 单位是 V.</p>
@@ -391,7 +391,7 @@
 <h4 id="输出-频率-RR-R"><a href="#输出-频率-RR-R" class="headerlink" title="输出 频率: RR.R"></a>输出 频率: RR.R</h4><p>R 是十进制的整数，范围为 0 - 9。 单位是 Hz。</p>
 <h4 id="电池电压-SSS-S"><a href="#电池电压-SSS-S" class="headerlink" title="电池电压: SSS.S"></a>电池电压: SSS.S</h4><p>S 是一个整数，范围为 0 – 9。 单位是 V。</p>
 <h4 id="温度-TT-T-1"><a href="#温度-TT-T-1" class="headerlink" title="温度: TT.T"></a>温度: TT.T</h4><p>T 是一个整数，范围为 0 – 9。单位是 摄氏度。</p>
-<h4 id="UPS-状态-b7b6b5b4b3b2b1b0-1"><a href="#UPS-状态-b7b6b5b4b3b2b1b0-1" class="headerlink" title="UPS 状态: b7b6b5b4b3b2b1b0"></a>UPS 状态: b7b6b5b4b3b2b1b0</h4><p><bn> 是二进制数 ‘0’ 或 ‘1’。UPS 状态：</p>
+<h4 id="UPS-状态-b7b6b5b4b3b2b1b0-1"><a href="#UPS-状态-b7b6b5b4b3b2b1b0-1" class="headerlink" title="UPS 状态: b7b6b5b4b3b2b1b0"></a>UPS 状态: b7b6b5b4b3b2b1b0</h4><p><bn> 是二进制数 ‘0’ 或 ‘1’。UPS 状态：</bn></p>
 <table>
 <thead>
 <tr>
@@ -449,11 +449,11 @@
 <p>O&#x3D;1, LCD 显示输出电压是相电压</p>
 <p>O&#x3D;0, LCD 显示输出电压是线电压</p>
 <p>如果 O&#x3D;1(相电压), 但监控需要线电压，线电压 &#x3D; √3 ×相电压如果 O&#x3D;0(线电压), 但监控需要相电压，相电压 &#x3D; 线电压 &#x2F;√</p>
-<h3 id="（3）-查询命令-Q6"><a href="#（3）-查询命令-Q6" class="headerlink" title="（3） 查询命令 Q6"></a>（3） 查询命令 Q6</h3><p>&#x3D;&#x3D;备注：<cr>是回车，如果用 16 进制发送 Q6<cr>为 51 36 OD&#x3D;&#x3D;</p>
-<p>Q6<cr></p>
+<h3 id="（3）-查询命令-Q6"><a href="#（3）-查询命令-Q6" class="headerlink" title="（3） 查询命令 Q6"></a>（3） 查询命令 Q6</h3><p>&#x3D;&#x3D;备注：<cr>是回车，如果用 16 进制发送 Q6<cr>为 51 36 OD&#x3D;&#x3D;</cr></cr></p>
+<p>Q6<cr></cr></p>
 <p><strong>回应：</strong></p>
 <p>(MMM.M MMM.M MMM.M NN.N PPP.P PPP.P PPP.P RR.R QQQ QQQ QQQ SSS.S</p>
-<p>VVV.V TT.T ttttt CCC KB ffffffff wwwwwwww YO<cr></p>
+<p>VVV.V TT.T ttttt CCC KB ffffffff wwwwwwww YO<cr></cr></p>
 <h4 id="UPS-输入电压-MMM-M-1"><a href="#UPS-输入电压-MMM-M-1" class="headerlink" title="UPS 输入电压: MMM.M"></a>UPS 输入电压: MMM.M</h4><p>M 是十进制的整数，范围为 0 - 9。 单位是 V。</p>
 <p>在单相系统中，只有 R 相是有效的，S 和 T 相总是 0。在三相系统中，按顺序代表 R、S、T 相的值。</p>
 <h4 id="UPS-输入频率-频率-NN-N"><a href="#UPS-输入频率-频率-NN-N" class="headerlink" title="UPS 输入频率 频率: NN.N"></a>UPS 输入频率 频率: NN.N</h4><p><strong>N</strong>  是十进制的整数，范围为 0 - 9。 单位是 Hz。<strong>输出电压</strong><strong>: PPP.P</strong></p>
@@ -553,11 +553,11 @@
 <p>O&#x3D;1, LCD 显示输出电压是相电压</p>
 <p>O&#x3D;0, LCD 显示输出电压是线电压</p>
 <p>如果 O&#x3D;1(相电压), 但监控需要线电压，线电压 &#x3D; √3 ×相电压如果 O&#x3D;0(线电压), 但监控需要相电压，相电压 &#x3D; 线电压 &#x2F;√3</p>
-<h3 id="4-查询命令WA"><a href="#4-查询命令WA" class="headerlink" title="(4)查询命令WA"></a>(4)查询命令WA</h3><p>&#x3D;&#x3D;备注：<cr>是回车，如果用 16 进制发送 WA<cr>为 51 41 OD&#x3D;&#x3D;</p>
-<p>WA<cr></p>
+<h3 id="4-查询命令WA"><a href="#4-查询命令WA" class="headerlink" title="(4)查询命令WA"></a>(4)查询命令WA</h3><p>&#x3D;&#x3D;备注：<cr>是回车，如果用 16 进制发送 WA<cr>为 51 41 OD&#x3D;&#x3D;</cr></cr></p>
+<p>WA<cr></cr></p>
 <p>UPS 响应</p>
 <p>(<a target="_blank" rel="noopener" href="http://www.w/">WWW.W </a><a target="_blank" rel="noopener" href="http://www.w/">WWW.W </a><a target="_blank" rel="noopener" href="http://www.w/">WWW.W </a>VVV.V VVV.V VVV.V TTT.T SSS.S AAA.A AAA.A AAA.A QQQ</p>
-<p>b7b6b5b4b3b2b1b0<cr></p>
+<p>b7b6b5b4b3b2b1b0<cr></cr></p>
 <h4 id="输出功率：-WWW-W"><a href="#输出功率：-WWW-W" class="headerlink" title="输出功率： WWW.W"></a>输出功率： <a target="_blank" rel="noopener" href="http://www.w/">WWW.W</a></h4><p>W 是十进制的整数，范围从 0 - 9。 单位是 KW. </p>
 <p>在单相系统中，只有 R 相是有效的，S 和 T 相总是 0。 </p>
 <p>在三相系统中，按顺序代表 R、S、T 相的值。</p>
@@ -571,7 +571,7 @@
 <h4 id="输出电流-AAA-A"><a href="#输出电流-AAA-A" class="headerlink" title="输出电流: AAA.A"></a>输出电流: AAA.A</h4><p>A 是十进制的整数，范围从 0 - 9。 单位是 A.</p>
 <p>在单相系统中，只有 R 相是有效的，S 和 T 相总是 0。在三相系统中，按顺序代表 R、S、T 相的值。</p>
 <h4 id="输出负载百分比-QQQ-1"><a href="#输出负载百分比-QQQ-1" class="headerlink" title="输出负载百分比: QQQ"></a>输出负载百分比: QQQ</h4><p>QQQ 是 W% 或 VA%的最大值。 VA% 是 VA 的最大值的百分比。 W% 是有用功率的最大值的百分比。</p>
-<h4 id="UPS-Status-b7b6b5b4b3b2b1b0"><a href="#UPS-Status-b7b6b5b4b3b2b1b0" class="headerlink" title="UPS Status:b7b6b5b4b3b2b1b0"></a>UPS Status:b7b6b5b4b3b2b1b0</h4><p><bn> 是二进制数 ‘0’ 或 ‘1’。UPS 状态：</p>
+<h4 id="UPS-Status-b7b6b5b4b3b2b1b0"><a href="#UPS-Status-b7b6b5b4b3b2b1b0" class="headerlink" title="UPS Status:b7b6b5b4b3b2b1b0"></a>UPS Status:b7b6b5b4b3b2b1b0</h4><p><bn> 是二进制数 ‘0’ 或 ‘1’。UPS 状态：</bn></p>
 <table>
 <thead>
 <tr>
@@ -612,9 +612,9 @@
 <td>保留是 0</td>
 </tr>
 </tbody></table>
-<h3 id="（5）关机命令S-S"><a href="#（5）关机命令S-S" class="headerlink" title="（5）关机命令S S"></a>（5）关机命令S S<n><cr></h3><h4 id="关机延迟时间"><a href="#关机延迟时间" class="headerlink" title="关机延迟时间: "></a>关机延迟时间: <n></h4><p><n>可设置范围： .2, .3, …, 01, 02,…, to 10。 单位是分钟。</p>
-<h4 id="UPS-动作-x2F-回应"><a href="#UPS-动作-x2F-回应" class="headerlink" title="UPS 动作&#x2F;回应:"></a>UPS 动作&#x2F;回应:</h4><p>延时<n>分钟后关闭 UPS 输出。电池模式下（该指令仅限于电池模式），UPS 在接受到关机指令<n>分钟后都会关闭输出。但如果<n>分钟内电池电压低于关闭点电压， 则 UPS 立即关闭输出。UPS 输出关闭后如果侦测到有市电，则延时 10 秒后重新输出。</p>
-<p>例如： S.3<cr> — 在(0.3) 分钟后切断输出。</p>
+<h3 id="（5）关机命令S-S"><a href="#（5）关机命令S-S" class="headerlink" title="（5）关机命令S S"></a>（5）关机命令S S<n><cr></cr></n></h3><h4 id="关机延迟时间"><a href="#关机延迟时间" class="headerlink" title="关机延迟时间: "></a>关机延迟时间: <n></n></h4><p><n>可设置范围： .2, .3, …, 01, 02,…, to 10。 单位是分钟。</n></p>
+<h4 id="UPS-动作-x2F-回应"><a href="#UPS-动作-x2F-回应" class="headerlink" title="UPS 动作&#x2F;回应:"></a>UPS 动作&#x2F;回应:</h4><p>延时<n>分钟后关闭 UPS 输出。电池模式下（该指令仅限于电池模式），UPS 在接受到关机指令<n>分钟后都会关闭输出。但如果<n>分钟内电池电压低于关闭点电压， 则 UPS 立即关闭输出。UPS 输出关闭后如果侦测到有市电，则延时 10 秒后重新输出。</n></n></n></p>
+<p>例如： S.3<cr> — 在(0.3) 分钟后切断输出。</cr></p>
 <p>Send:3 char<br>51 31 0D </p>
 <p>Recv:46 char<br>28 32 33 31 2E 36 20 31 34 30 2E 30 20 32 32 30 2E 34 20 30 33 36 20 35 30 2E 30 20 32 2E 32 30 20 32 32 2E 30 20 30 30 30 30 30 30 30 00 </p>
 <p>Send:3 char<br>51 31 0D </p>
